@@ -7,6 +7,26 @@ use App\Controller\IndexController;
 use App\Routing\RouteNotFoundException;
 use App\Routing\Router;
 
+// DB
+[
+  'DB_HOST'     => $host,
+  'DB_PORT'     => $port,
+  'DB_NAME'     => $dbname,
+  'DB_CHARSET'  => $charset,
+  'DB_USER'     => $user,
+  'DB_PASSWORD' => $password
+] = parse_ini_file(__DIR__ . '/../conf/db.ini');
+
+$dsn = "mysql:dbname=$dbname;host=$host:$port;charset=$charset";
+
+try {
+  $pdo = new PDO($dsn, $user, $password);
+  var_dump($pdo);
+} catch (PDOException $ex) {
+  echo "Erreur lors de la connexion à la base de données : " . $ex->getMessage();
+  exit;
+}
+
 // Appeler un routeur pour lui transférer la requête
 $router = new Router();
 $router->addRoute(
