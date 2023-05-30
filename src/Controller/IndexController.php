@@ -2,10 +2,10 @@
 
 namespace App\Controller;
 
-class IndexController
+class IndexController extends AbstractController
 {
-  public function home()
+  public function home(): string
   {
-    echo "Hello Sciences-U";
+    return $this->twig->render('index.html.twig');
   }
 }
