@@ -2,6 +2,11 @@
 
 ## Démarrage
 
+### Equipe 
+
+Maxime CHOSTAK & Tali TOUBOUL
+
+
 ### Composer
 
 Pour récupérer les dépendances déclarées dans `composer.json` et générer l'autoloader PSR-4, exécuter la commande suivante :
