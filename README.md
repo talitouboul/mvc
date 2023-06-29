@@ -68,6 +68,18 @@ Dans cet exemple, la méthode uploadFile est appelée avec le tableau $_FILES['f
 
 N'oubliez pas d'adapter le code en fonction de votre projet et des emplacements de fichiers spécifiés dans votre environnement.
 
+## Nos problèmes
+
+Étant donné que nous étions débutants dans ce projet, notre groupe a eu l'opportunité de découvrir de nouvelles notions. Cela nous a permis d'explorer divers aspects tels que l'organisation du code, la structuration des fichiers, les approches en matière d'architecture logicielle, et bien d'autres encore.
+
+
+Pendant le développement de ce projet, nous avons été confrontés à deux défis majeurs liés à la gestion des fichiers soumis par les utilisateurs :
+
+Validation des fichiers : Nous avons dû mettre en place une validation rigoureuse pour garantir que les fichiers téléchargés respectaient certaines normes. Cela incluait la vérification du format approprié des fichiers, le respect des limites de taille spécifiées et la prévention de tout risque de sécurité potentiel, tels que la présence de contenus malveillants.
+
+Gestion des erreurs de téléchargement : Tout au long du processus de téléchargement des fichiers, nous avons dû prendre en compte différentes erreurs susceptibles de se produire. Nous avons mis en place des mécanismes de gestion des erreurs afin d'informer les utilisateurs en cas d'échec du téléchargement et de leur fournir des informations détaillées sur la nature de l'erreur rencontrée.
+
+
 ## Cours
 
 Le cours complet se trouve à [cette adresse](https://ld-web.github.io/su-2023-php-mvc-course/).
