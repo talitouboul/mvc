@@ -1,0 +1,10 @@
+<h1>Formulaire d'upload de fichier MVC</h1>
+
+{% if message is not null %}
+    <h3>{{ message }}</h3>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data" action="/file/upload">
+    <input type="file" name="fichier">
+    <input type="submit" value="Envoyer">
+</form>

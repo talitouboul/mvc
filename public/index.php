@@ -3,6 +3,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 // Initialisation de certaines choses
 use App\Controller\ContactController;
+use App\Controller\FileUploadController;
 use App\Controller\IndexController;
 use App\Routing\RouteNotFoundException;
 use App\Routing\Router;
@@ -27,7 +28,6 @@ $dsn = "mysql:dbname=$dbname;host=$host:$port;charset=$charset";
 
 try {
   $pdo = new PDO($dsn, $user, $password);
-  var_dump($pdo);
 } catch (PDOException $ex) {
   echo "Erreur lors de la connexion à la base de données : " . $ex->getMessage();
   exit;
@@ -58,6 +58,20 @@ $router->addRoute(
   'GET',
   ContactController::class,
   'contact'
+);
+$router->addRoute(
+    'file_upload_index',
+    '/file',
+    'GET',
+    FileUploadController::class,
+    'index'
+);
+$router->addRoute(
+    'file_upload_post',
+    '/file/upload',
+    'POST',
+    FileUploadController::class,
+    'post'
 );
 
 try {
